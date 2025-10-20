@@ -1,0 +1,129 @@
+::selection {
+  background-color: #fec260;
+  color: black;
+}
+
+body {
+  background-color: #f7ecde;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+h1::after {
+  content: " ";
+  background-color: #fec260;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: -1;
+  transition: all 0.6s;
+}
+
+h1:hover::after {
+  height: 40px;
+}
+.hr {
+  width: 85%;
+  height: 0;
+  border-bottom: 2px dotted black;
+}
+p {
+  font-family: "Righteous", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+.form-label {
+  font-weight: 600;
+}
+form button {
+  background-color: #d1512d;
+  border: none;
+  border-radius: 5px;
+  width: 20% !important;
+  margin: auto;
+  padding: 7px 30px;
+  color: white;
+}
+form button:hover {
+  background-color: #bb4120;
+}
+input.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+button,
+.visit,
+.edit,
+.delete {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 7px 12px;
+  transition: all 0.6s;
+}
+.visit {
+  background-color: #9eb23b;
+}
+.edit {
+  background-color: #eeee35;
+}
+.delete {
+  background-color: #eb1d36;
+}
+
+.visit:hover {
+  background-color: #8a9e23;
+}
+.edit:hover {
+  background-color: #dede04;
+}
+
+.delete:hover {
+  background-color: #d30820;
+}
+
+table thead {
+  font-weight: 700;
+}
+
+table tbody {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 440px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .my-5{
+    margin-bottom: 10px !important;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  form button {
+    width: 50% !important;
+  }
+  table tbody tr td {
+    font-size: 0.8rem;
+  }
+  .visit,
+  .edit,
+  .delete {
+    font-size: 0.7rem;
+  }
+}

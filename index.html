@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookmark-with-star.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1 class="my-5 text-center">Bookmarker</h1>
+    <div class="hr col-11 mx-auto mb-4 pt-3"></div>
+    <div class="container">
+      <form class="row mx-auto">
+        <p class="text-center pb-3">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </p>
+        <div class="mb-4">
+          <label for="bookmarkName" class="form-label"
+            ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="bookmarkName"
+            placeholder="Bookmark Name"
+            onchange="checkNameValidation()"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="wibsiteName" class="form-label"
+            ><i class="fa-solid fa-link pe-2"></i>Site URL</label
+          >
+          <input
+            type="url"
+            class="form-control"
+            id="wibsiteName"
+            placeholder="website URL"
+            onchange="checkUrlValidation()"
+          />
+        </div>
+        <button onclick="addBookmark()" type="button" class="mx-auto mb-4">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="hr col-11 mx-auto mb-4"></div>
+    <div class="container">
+      <div class="table-responsive col-12 mx-auto">
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Visit</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="showTableDetails"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
